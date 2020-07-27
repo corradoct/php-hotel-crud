@@ -10,11 +10,13 @@ include __DIR__ . '/partials/header.php';
       <!-- Main -->
       <main>
 
-        <!-- Creo i messaggi di modifica o eliminazione della stanza se nell'URL sono presenti delle query con chiave ==> valore -->
+        <!-- Creo i messaggi di modifica, eliminazione o creazione della stanza se nell'URL sono presenti delle query con chiave ==> valore -->
         <?php if(isset($_GET['roomUpdated'])) { ?>
           <p>Room number <?php echo $_GET['roomUpdated']; ?> successfully updated</p>
         <?php } elseif(isset($_GET['roomDeleted'])) { ?>
           <p>Room number <?php echo $_GET['roomDeleted']; ?> successfully deleted</p>
+        <?php } elseif(isset($_GET['roomCreated'])) { ?>
+          <p>Room number <?php echo $_GET['roomCreated']; ?> successfully created</p>
         <?php } ?>
 
         <!-- Table -->
@@ -74,6 +76,14 @@ include __DIR__ . '/partials/header.php';
 
         </table>
         <!-- End table -->
+
+        <!-- Create room -->
+        <form action="<?php echo $basePath . '/create/insert.php'; ?>" method="post">
+          <input type="hidden" name="newId" value="">
+          <button type="submit" name="newRoom" value="">Create room</button>
+        </form>
+        <!-- End create room -->
+
       </main>
       <!-- End  main -->
 

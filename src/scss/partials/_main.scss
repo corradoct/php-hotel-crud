@@ -1,0 +1,20 @@
+main {
+  padding: 20px;
+
+  table {
+
+    td {
+      padding: 0 15px;
+      text-align: center;
+      border: 1px solid #000;
+
+      button.noBtn {
+        background-color: #fff;
+        border: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        cursor: pointer;
+      }
+    }
+  }
+}

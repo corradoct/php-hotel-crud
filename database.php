@@ -1,5 +1,8 @@
+<!-- File che si occupa della connessione al database -->
+
 <?php
 
+// Includo i file base per l'URL e la connessione al database
 include __DIR__ . '/env.php';
 
 // Connect

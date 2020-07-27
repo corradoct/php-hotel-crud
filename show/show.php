@@ -1,10 +1,16 @@
+<!-- File che mostra i dettagli della stanza selezionata -->
+
 <?php
 
+// Includo la query
 include __DIR__ . '/server.php';
+
+// Includo l'header
 include __DIR__ . '/../partials/header.php';
 
 ?>
 
+<!-- Se room non è vuoto stampo i risultati -->
 <?php if(!empty($room)) { ?>
   <main>
     <h2>Stai vedendo la stanza numero : <?php echo $room['room_number']; ?></h2>
@@ -16,6 +22,6 @@ include __DIR__ . '/../partials/header.php';
       <li>Data creazione: <?php echo $room['created_at']; ?></li>
     </ul>
   </main>
-<?php } else { ?>
+<?php } else { ?>  <!-- Altrimenti stampo un messaggio di errore -->
   <p>La stanza non esiste</p>
 <?php } ?>

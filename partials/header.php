@@ -1,5 +1,8 @@
 <?php
+
+// Includo i file di base dell'URL e del database
 include __DIR__ . '/../env.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

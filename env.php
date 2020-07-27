@@ -1,3 +1,5 @@
+<!-- File con le credenziali per la connessione al database e l'URL base -->
+
 <?php
 
 // Database credentials
